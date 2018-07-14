@@ -1,0 +1,34 @@
+.table {
+  font-size: 14px;
+}
+.table thead th {
+  position: relative;
+}
+.is--asc:before {
+  position: absolute;
+  /* margin-left: -16px; */
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  content: "▲";
+}
+.is--desc:before {
+  position: absolute;
+  /* margin-left: -16px; */
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  content: "▼";
+}
+
+.pagination {
+  justify-content: flex-end;
+}
+
+.pagination-table {
+  text-align: center;
+}
+
+td.plus {
+  text-align: center;
+}
