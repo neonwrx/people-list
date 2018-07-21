@@ -1,30 +1,18 @@
-import React, { Component } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink } from 'reactstrap';
+import React, { PureComponent } from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
-  }
-  toggle() {
+class Header extends PureComponent {
+  state = {
+    isOpen: false,
+  };
+  toggle = () => {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
-  }
+  };
 
   render() {
-    return(
+    return (
       <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">List of people</NavbarBrand>
